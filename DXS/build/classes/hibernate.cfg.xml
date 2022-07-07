@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.username">sa</property>
+        <!--        <property name="hibernate.connection.url">jdbc:sqlserver://ADMINISTRACION\SQLEXPRESS;databaseName=dbDXSAT</property>
+        <property name="hibernate.connection.password">aspel**2018</property>-->
+<!--        <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-9TOA5T5\SQLEXPRESS;databaseName=dbDXSAT</property>
+        <property name="hibernate.connection.password">dev22</property>-->
+        <!--                <property name="hibernate.connection.url">jdbc:sqlserver://ASUS\SQLEXPRESS;databaseName=dbDXSAT</property>
+        <property name="hibernate.connection.password">aspel</property>-->
+        <!--        <property name="hibernate.connection.url">jdbc:sqlserver://192.168.1.105\SQLEXPRESS;databaseName=dbDXSAT</property>
+        <property name="hibernate.connection.password">aspel**2016</property>-->
+        <property name="hibernate.connection.url">jdbc:sqlserver://DELLSERVER\SQLEXPRESS;databaseName=dbDXSAT</property>
+        <property name="hibernate.connection.password">aspel**2022</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping resource="mx/insoftec/model/Cliente.hbm.xml"/>
+        <mapping resource="mx/insoftec/model/Detalle.hbm.xml"/>
+        <mapping resource="mx/insoftec/model/Cfdi.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

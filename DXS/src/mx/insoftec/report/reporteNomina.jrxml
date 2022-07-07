@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteNomina" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e11ab65-a73b-435c-ba34-5365f7877e6a">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<parameter name="f1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="f2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT DISTINCT (dbo.nomina.Clave), dbo.nomina.Concepto, SUM(dbo.nomina.ImporteExento) ImporteExento, SUM(dbo.nomina.ImporteGravado)ImporteGravado, dbo.nomina.TipoPercepcion, SUM(dbo.nomina.Importe)Importe, dbo.nomina.TipoDeduccion
+FROM  dbo.cfdi INNER JOIN
+dbo.nomina ON dbo.cfdi.UUID = dbo.nomina.uuid where dbo.nomina.FechaFinalPago >=$P{f1} and dbo.nomina.FechaFinalPago <=$P{f2}  GROUP BY dbo.nomina.Clave, dbo.nomina.Concepto,dbo.nomina.TipoPercepcion,dbo.nomina.TipoDeduccion]]>
+	</queryString>
+	<field name="Clave" class="java.lang.String"/>
+	<field name="Concepto" class="java.lang.String"/>
+	<field name="ImporteExento" class="java.math.BigDecimal"/>
+	<field name="ImporteGravado" class="java.math.BigDecimal"/>
+	<field name="TipoPercepcion" class="java.lang.String"/>
+	<field name="Importe" class="java.math.BigDecimal"/>
+	<field name="TipoDeduccion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="57" height="20" uuid="72e5c436-3b70-46c8-9582-ee4951ff20a8"/>
+				<text><![CDATA[Clave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="0" width="139" height="20" uuid="2006ee33-5d1f-4a6a-ac47-93f3bb66f42b"/>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="0" width="100" height="20" uuid="0fe21b55-7c15-4bad-bcb4-856baea5d1af"/>
+				<text><![CDATA[ImporteExento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="0" width="100" height="20" uuid="e492d331-b871-44b4-ac8c-631201a373a9"/>
+				<text><![CDATA[ImporteGravado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="100" height="20" uuid="d6d70ef1-890b-4565-b0bb-e1eb1f50b5bd"/>
+				<text><![CDATA[TipoPercepcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="0" width="100" height="20" uuid="34dd0129-21fb-460a-a25d-c7b0f9fd0398"/>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="0" width="100" height="20" uuid="e3c3e14f-610e-4f62-99a9-f0e575b9dc75"/>
+				<text><![CDATA[TipoDeduccion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="57" height="20" uuid="a1800389-6e86-4f38-8842-8403835b0caf"/>
+				<textFieldExpression><![CDATA[$F{Clave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="0" width="139" height="20" uuid="98619aea-8260-4d76-aaad-709ef6bab6a5"/>
+				<textFieldExpression><![CDATA[$F{Concepto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="0" width="100" height="20" uuid="d3c3113a-e59a-477c-8cbe-51f9d1dc6658"/>
+				<textFieldExpression><![CDATA[$F{ImporteExento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="0" width="100" height="20" uuid="fbcfada7-57c3-449d-9c1f-247495898261"/>
+				<textFieldExpression><![CDATA[$F{ImporteGravado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="100" height="20" uuid="18bed50a-610c-4cc6-9d34-a25ccf502430"/>
+				<textFieldExpression><![CDATA[$F{TipoPercepcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="0" width="100" height="20" uuid="5120fbfd-9fbe-4177-ad22-cb8dca572ab4"/>
+				<textFieldExpression><![CDATA[$F{Importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="596" y="0" width="100" height="20" uuid="3fedd3c5-baa9-4047-8ab4-2836ed6d252f"/>
+				<textFieldExpression><![CDATA[$F{TipoDeduccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

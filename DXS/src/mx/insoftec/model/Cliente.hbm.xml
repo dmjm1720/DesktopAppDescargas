@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/06/2018 10:15:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mx.insoftec.model.Cliente" table="cliente" schema="dbo" catalog="dbDXSAT" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="native" />
+        </id>
+        <property name="rfc" type="string">
+            <column name="Rfc" />
+        </property>
+        <property name="razonSocial" type="string">
+            <column name="RazonSocial" />
+        </property>
+        <property name="activo" type="string">
+            <column name="Activo" />
+        </property>
+    </class>
+</hibernate-mapping>

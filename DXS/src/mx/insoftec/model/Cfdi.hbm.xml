@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/06/2018 10:15:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mx.insoftec.model.Cfdi" table="cfdi" schema="dbo" catalog="dbDXSAT" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="native" />
+        </id>
+        <property name="versionCfdi" type="string">
+            <column name="VersionCfdi" length="5" />
+        </property>
+        <property name="fecha" type="string">
+            <column name="Fecha" length="25" />
+        </property>
+        <property name="serie" type="string">
+            <column name="Serie" length="50" />
+        </property>
+        <property name="folio" type="string">
+            <column name="Folio" length="50" />
+        </property>
+        <property name="formaPago" type="string">
+            <column name="FormaPago" length="250" />
+        </property>
+        <property name="subTotal" type="big_decimal">
+            <column name="SubTotal" scale="4" />
+        </property>
+        <property name="moneda" type="string">
+            <column name="Moneda" length="150" />
+        </property>
+        <property name="tipoCambio" type="big_decimal">
+            <column name="TipoCambio" scale="4" />
+        </property>
+        <property name="total" type="big_decimal">
+            <column name="Total" scale="4" />
+        </property>
+        <property name="tipoDeComprobante" type="string">
+            <column name="TipoDeComprobante" length="50" />
+        </property>
+        <property name="metodoPago" type="string">
+            <column name="MetodoPago" length="50" />
+        </property>
+        <property name="condicionesDePago" type="string">
+            <column name="CondicionesDePago" length="500" />
+        </property>
+        <property name="descuento" type="big_decimal">
+            <column name="Descuento" scale="4" />
+        </property>
+        <property name="lugarExpedicion" type="string">
+            <column name="LugarExpedicion" length="500" />
+        </property>
+        <property name="certificado" type="string">
+            <column name="Certificado" />
+        </property>
+        <property name="noCertificado" type="string">
+            <column name="NoCertificado" length="25" />
+        </property>
+        <property name="sello" type="string">
+            <column name="Sello" length="500" />
+        </property>
+        <property name="rfcEmisor" type="string">
+            <column name="RfcEmisor" length="20" />
+        </property>
+        <property name="nombreEmisor" type="string">
+            <column name="NombreEmisor" length="200" />
+        </property>
+        <property name="regimenFiscal" type="string">
+            <column name="RegimenFiscal" length="100" />
+        </property>
+        <property name="rfcReceptor" type="string">
+            <column name="RfcReceptor" length="20" />
+        </property>
+        <property name="nombreReceptor" type="string">
+            <column name="NombreReceptor" length="200" />
+        </property>
+        <property name="impLocTrasladado" type="string">
+            <column name="ImpLocTrasladado" length="100" />
+        </property>
+        <property name="tasadeTraslado" type="string">
+            <column name="TasadeTraslado" length="10" />
+        </property>
+        <property name="importeTraslado" type="string">
+            <column name="ImporteTraslado" length="10" />
+        </property>
+        <property name="impuestoRet1" type="string">
+            <column name="ImpuestoRet1" length="10" />
+        </property>
+        <property name="tipoFactorRet1" type="string">
+            <column name="TipoFactorRet1" length="20" />
+        </property>
+        <property name="tasaOcuotaRet1" type="string">
+            <column name="TasaOCuotaRet1" length="10" />
+        </property>
+        <property name="importeRet1" type="big_decimal">
+            <column name="ImporteRet1" scale="4" />
+        </property>
+        <property name="impuestoTras1" type="string">
+            <column name="ImpuestoTras1" length="10" />
+        </property>
+        <property name="tipoFactorTras1" type="string">
+            <column name="TipoFactorTras1" length="20" />
+        </property>
+        <property name="tasaOcuotaTras1" type="string">
+            <column name="TasaOCuotaTras1" length="10" />
+        </property>
+        <property name="importeTras1" type="big_decimal">
+            <column name="ImporteTras1" scale="4" />
+        </property>
+        <property name="impuestoRet2" type="string">
+            <column name="ImpuestoRet2" length="10" />
+        </property>
+        <property name="tipoFactorRet2" type="string">
+            <column name="TipoFactorRet2" length="20" />
+        </property>
+        <property name="tasaOcuotaRet2" type="string">
+            <column name="TasaOCuotaRet2" length="10" />
+        </property>
+        <property name="importeRet2" type="big_decimal">
+            <column name="ImporteRet2" scale="4" />
+        </property>
+        <property name="impuestoTras2" type="string">
+            <column name="ImpuestoTras2" length="10" />
+        </property>
+        <property name="tipoFactorTras2" type="string">
+            <column name="TipoFactorTras2" length="20" />
+        </property>
+        <property name="tasaOcuotaTras2" type="string">
+            <column name="TasaOCuotaTras2" length="10" />
+        </property>
+        <property name="importeTras2" type="big_decimal">
+            <column name="ImporteTras2" scale="4" />
+        </property>
+        <property name="impuestoRet3" type="string">
+            <column name="ImpuestoRet3" length="10" />
+        </property>
+        <property name="tipoFactorRet3" type="string">
+            <column name="TipoFactorRet3" length="20" />
+        </property>
+        <property name="tasaOcuotaRet3" type="string">
+            <column name="TasaOCuotaRet3" length="10" />
+        </property>
+        <property name="importeRet3" type="big_decimal">
+            <column name="ImporteRet3" scale="4" />
+        </property>
+        <property name="impuestoTras3" type="string">
+            <column name="ImpuestoTras3" length="10" />
+        </property>
+        <property name="tipoFactorTras3" type="string">
+            <column name="TipoFactorTras3" length="20" />
+        </property>
+        <property name="tasaOcuotaTras3" type="string">
+            <column name="TasaOCuotaTras3" length="10" />
+        </property>
+        <property name="importeTras3" type="big_decimal">
+            <column name="ImporteTras3" scale="4" />
+        </property>
+        <property name="usoCfdi" type="string">
+            <column name="UsoCFDI" length="10" />
+        </property>
+        <property name="versionTfd" type="string">
+            <column name="VersionTFD" length="5" />
+        </property>
+        <property name="uuid" type="string">
+            <column name="UUID" length="40" />
+        </property>
+        <property name="fechaTimbrado" type="string">
+            <column name="FechaTimbrado" length="50" />
+        </property>
+        <property name="rfcProvCertif" type="string">
+            <column name="RfcProvCertif" length="50" />
+        </property>
+        <property name="selloCfd" type="string">
+            <column name="SelloCFD" length="500" />
+        </property>
+        <property name="noCertificadoSat" type="string">
+            <column name="NoCertificadoSAT" length="50" />
+        </property>
+        <property name="selloSat" type="string">
+            <column name="SelloSAT" length="500" />
+        </property>
+        <property name="nombreArchivo" type="string">
+            <column name="NombreArchivo" length="100" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="Tipo" length="50" />
+        </property>
+        <property name="estatusCfdi" type="string">
+            <column name="EstatusCfdi" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

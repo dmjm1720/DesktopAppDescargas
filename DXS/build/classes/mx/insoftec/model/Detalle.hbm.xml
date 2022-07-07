@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/06/2018 10:15:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mx.insoftec.model.Detalle" table="detalle" schema="dbo" catalog="dbDXSAT" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="native" />
+        </id>
+        <property name="cantidad" type="string">
+            <column name="Cantidad" length="50" />
+        </property>
+        <property name="unidad" type="string">
+            <column name="Unidad" length="50" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="1000" />
+        </property>
+        <property name="valorUnitario" type="big_decimal">
+            <column name="ValorUnitario" scale="4" />
+        </property>
+        <property name="importe" type="big_decimal">
+            <column name="Importe" scale="4" />
+        </property>
+        <property name="claveProdServ" type="string">
+            <column name="ClaveProdServ" length="50" />
+        </property>
+        <property name="claveUnidad" type="string">
+            <column name="ClaveUnidad" length="50" />
+        </property>
+        <property name="uuid" type="string">
+            <column name="uuid" length="40" />
+        </property>
+        <property name="miDescuento" type="big_decimal">
+            <column name="MiDescuento" scale="4" />
+        </property>
+    </class>
+</hibernate-mapping>
