@@ -345,6 +345,7 @@ public class JInternalFrameDescarga extends javax.swing.JInternalFrame implement
 
         String files;
         //String path = "C:\\Users\\Mario Arias\\Downloads\\";
+        //String path = "/home/aigm/Descargas/";
         String path = "C:\\descargas_xml\\";
         //String path = "Z:\\descargas_xml\\";
         File folder = new File(path);
@@ -487,8 +488,9 @@ public class JInternalFrameDescarga extends javax.swing.JInternalFrame implement
                                 java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
                                 if (desktop.isSupported(java.awt.Desktop.Action.BROWSE)) {
                                     try {
-                                        java.net.URI uri = new java.net.URI(this.nuevoLink.concat(this.cadenaLink.substring(0, 640)));
-                                        //System.out.println(uri);
+                                        java.net.URI uri = new java.net.URI(this.nuevoLink.concat(this.cadenaLink.substring(0, 620)));
+                                        //java.net.URI uri2 = new java.net.URI(this.nuevoLink.concat(this.cadenaLink.substring(0, 640)));
+                                        System.out.println(uri);
                                         Thread.sleep(500);
                                         desktop.browse(uri);
                                     } catch (IOException | InterruptedException | URISyntaxException e) {
