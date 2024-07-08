@@ -52,8 +52,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "expresionImpresa", scope = Consulta.class)
     public JAXBElement<String> createConsultaExpresionImpresa(String value) {
@@ -61,8 +65,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Acuse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Acuse }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Acuse }{@code >}
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultaResult", scope = ConsultaResponse.class)
     public JAXBElement<Acuse> createConsultaResponseConsultaResult(Acuse value) {

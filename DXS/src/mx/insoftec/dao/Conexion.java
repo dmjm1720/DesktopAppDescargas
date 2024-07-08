@@ -16,14 +16,6 @@ public class Conexion {
         this.conn = conn;
     }
 
-//    private final String URL = "jdbc:sqlserver://ADMINISTRACION\\SQLEXPRESS;databaseName=dbDXSAT";
-//    private final String PASS = "aspel**2018";
-//    private final String URL = "jdbc:sqlserver://DESKTOP-9TOA5T5\\SQLEXPRESS;databaseName=dbDXSAT";
-//    private final String PASS = "dev22";
-//    private final String URL = "jdbc:sqlserver://ASUS\\SQLEXPRESS;databaseName=dbDXSAT";
-//    private final String PASS = "aspel";
-//    private final String URL = "jdbc:sqlserver://192.168.1.105\\SQLEXPRESS;databaseName=dbDXSAT";
-//    private final String PASS = "aspel**2016";
     private final String URL = "jdbc:sqlserver://DELLSERVER\\SQLEXPRESS;databaseName=dbDXSAT";
     private final String PASS = "aspel**2022";
     private final String USERNAME = "sa";

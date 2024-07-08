@@ -4,14 +4,6 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="hibernate.connection.username">sa</property>
-        <!--        <property name="hibernate.connection.url">jdbc:sqlserver://ADMINISTRACION\SQLEXPRESS;databaseName=dbDXSAT</property>
-        <property name="hibernate.connection.password">aspel**2018</property>-->
-<!--        <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-9TOA5T5\SQLEXPRESS;databaseName=dbDXSAT</property>
-        <property name="hibernate.connection.password">dev22</property>-->
-        <!--                <property name="hibernate.connection.url">jdbc:sqlserver://ASUS\SQLEXPRESS;databaseName=dbDXSAT</property>
-        <property name="hibernate.connection.password">aspel</property>-->
-        <!--        <property name="hibernate.connection.url">jdbc:sqlserver://192.168.1.105\SQLEXPRESS;databaseName=dbDXSAT</property>
-        <property name="hibernate.connection.password">aspel**2016</property>-->
         <property name="hibernate.connection.url">jdbc:sqlserver://DELLSERVER\SQLEXPRESS;databaseName=dbDXSAT</property>
         <property name="hibernate.connection.password">aspel**2022</property>
         <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
